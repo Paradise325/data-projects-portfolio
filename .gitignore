@@ -1,0 +1,34 @@
+# ===== Python 缓存与编译文件 =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+*.egg
+
+# ===== 编辑器配置文件（PyCharm/VSCode） =====
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ===== 大数据集与大文件（禁止上传） =====
+CCPD2020/
+*.zip
+*.rar
+*.7z
+*.pbix
+*.csv.bak
+
+# ===== 日志与临时文件 =====
+*.log
+*.tmp
+tmp/
+temp/
+
+# ===== 虚拟环境 =====
+venv/
+env/
+ENV/

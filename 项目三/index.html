@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>绍兴市人才市场数据驾驶舱</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>.chart-box { width: 48%; height: 400px; display: inline-block; }</style>
+</head>
+<body>
+    <div class="chart-box" id="chart1"></div>
+    <div class="chart-box" id="chart2"></div>
+    <div class="chart-box" id="chart3"></div>
+    <div class="chart-box" id="chart4"></div>
+
+    <script>
+        // 行业岗位需求柱状图
+        echarts.init(document.getElementById('chart1')).setOption({
+            title: { text: '各行业岗位需求量' },
+            xAxis: { type: 'category', data: ['IT互联网', '制造业', '金融业', '教育', '医疗健康', '房地产'] },
+            yAxis: { type: 'value' },
+            series: [{ type: 'bar', data: [12000, 15000, 8000, 9000, 6000, 5000] }]
+        });
+
+        // 薪资分布饼图
+        echarts.init(document.getElementById('chart2')).setOption({
+            title: { text: '薪资区间分布' },
+            series: [{ type: 'pie', data: [
+                { value: 15000, name: '5k以下' },
+                { value: 22000, name: '5k-10k' },
+                { value: 10000, name: '10k-15k' },
+                { value: 5000, name: '15k以上' }
+            ] }]
+        });
+    </script>
+</body>
+</html>

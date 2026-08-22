@@ -23,3 +23,10 @@
 | 04 | 跨境电商选品决策数据洞察与市场机会挖掘 | Prophet时序预测、SnowNLP情感分析、评分模型 | 锁定3款高潜力单品，预估毛利率40%+ |
 
 ## 目录结构
+├── 01-quant-stock-selection/       # 量化选股项目
+├── 02-license-plate-recognition/   # 车牌识别项目
+├── 03-employment-market-analysis/  # 就业市场分析项目
+└── 04-cross-border-ecommerce/      # 跨境电商选品项目
+
+## 运行说明
+每个子项目目录下均有独立的 `README.md`，包含详细的运行步骤、数据说明与成果展示。

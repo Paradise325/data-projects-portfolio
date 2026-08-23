@@ -1,7 +1,7 @@
 import pandas as pd
 from sqlalchemy import create_engine
 
-engine = create_engine("mysql+pymysql://root:你的密码@localhost:3306/shaoxing_job_market")
+engine = create_engine("mysql+pymysql://root:对应密码@localhost:3306/shaoxing_job_market")
 
 # 1. ODS数据写入
 df = pd.read_csv("../../data/ods/ods_recruitment_data.csv")

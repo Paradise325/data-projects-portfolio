@@ -2,7 +2,7 @@ import os
 import cv2
 import easyocr
 
-# ========== 全局路径配置（统一管理，无需多处修改） ==========
+# ========== 全局路径配置==========
 # CCPD原始数据集路径
 data_dir = r"C:\Users\23924\Desktop\Experiment\CCPD2020"
 # 预处理后图片输出路径
@@ -17,7 +17,7 @@ os.makedirs(result_dir, exist_ok=True)
 reader = easyocr.Reader(['ch_sim', 'en'], gpu=False)
 
 
-# ========== 模块1：批量图片预处理 ==========
+# ========== 1：批量图片预处理 ==========
 def batch_preprocess(img_count=1000):
 
     img_list = [f for f in os.listdir(data_dir) if f.endswith(".jpg")]
@@ -43,7 +43,7 @@ def batch_preprocess(img_count=1000):
     print(f"批量预处理完成，结果已保存至: {output_dir}")
 
 
-# ========== 模块2：车牌识别核心 ==========
+# ========== 2：车牌识别核心 ==========
 def recognize_plate(img):
     """单张图片车牌识别"""
     result = reader.readtext(img, detail=0)
